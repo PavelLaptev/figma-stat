@@ -1,0 +1,33 @@
+{
+  "name": "terminal-nodejs-filter-json",
+  "version": "0.1.0",
+  "description": "Filter JSON and save it to a separate file.",
+  "scripts": {
+    "start": "node scripts/index.js",
+    "prettier-format": "prettier --config .prettierrc 'scripts/**/*.js' --write",
+    "prettier-watch": "onchange 'scripts/**/*.js' -- prettier --write {{changed}}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PavelLaptev/Clean-Iconmoon-JSON.git"
+  },
+  "keywords": [],
+  "author": "Pavel Laptev <laptev.graphics@gmail.com> (https://pavellaptev.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PavelLaptev/Clean-Iconmoon-JSON/issues"
+  },
+  "homepage": "https://github.com/PavelLaptev/Clean-Iconmoon-JSON#readme",
+  "engines": {
+    "node": "^8.0.0"
+  },
+  "devDependencies": {
+    "onchange": "^7.1.0",
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "fs-extra": "^10.0.0",
+    "node-fetch": "^3.0.0"
+  },
+  "type": "module"
+}
