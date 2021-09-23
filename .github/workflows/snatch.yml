@@ -17,8 +17,7 @@ jobs:
         with:
           node-version: 14
 
-#       - run: |
-#           git checkout --orphan gh-pages
+      - run: git checkout gh-pages
 
       - run: npm install
       - run: npm start
