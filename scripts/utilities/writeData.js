@@ -20,6 +20,4 @@ export async function writeData(data) {
     fs.outputFile(dateFile, JSON.stringify(plugin.counters), 'utf8');
     fs.outputFile(currentDateFile, JSON.stringify(plugin.counters), 'utf8');
   });
-
-  // await fs.outputFile(file, JSON.stringify(data), 'utf8');
 }
