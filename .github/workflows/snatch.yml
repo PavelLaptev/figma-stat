@@ -1,18 +1,15 @@
 name: snatch
 
 on:
-  push:
-    branches: 
-    - main
-    
-#  schedule:
-#    - cron: "0 16,18,19 * * *"
+ schedule:
+   - cron: "0 16,18,19 * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: INSTALL AND BUILD
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
@@ -20,4 +17,11 @@ jobs:
 
       - run: npm install
       - run: npm start
-      - run: git push origin `git subtree split --prefix data master`:gh-pages --force
+      
+      - name: CREATE GH-PAGES
+      - run: |
+          git checkout --orphan gh-pages
+          git rm -r --cached .
+          git commit --allow-empty -m 'Create gh-pages'
+          git checkout master --force
+
