@@ -5,4 +5,3 @@ import { fetchPluginsDataAsync } from './utilities/fetchPluginsDataAsync.js';
 const parsedPluginData = await fetchPluginsDataAsync();
 await writeData(parsedPluginData);
 // console.log(parsedPluginData);
-console.log('Done job');
