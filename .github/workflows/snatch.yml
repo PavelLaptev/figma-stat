@@ -20,11 +20,9 @@ jobs:
 
       - run: npm install
       - run: npm start
-     
-      # CREATE GH-PAGES
-      - run: |
-          git checkout --orphan gh-pages
-          git rm -r --cached .
-          git commit --allow-empty -m 'Create gh-pages'
-          git checkout master --force
+
+      - run: git checkout --orphan gh-pages
+      - run: git rm -r --cached .
+      - run: git commit --allow-empty -m 'Create gh-pages'
+      - run: git checkout master --force
 
