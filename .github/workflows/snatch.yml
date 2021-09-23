@@ -3,7 +3,7 @@ name: snatch
 on:
   push:
     branches: 
-    - master
+    - main
     
 #  schedule:
 #    - cron: "0 16,18,19 * * *"
