@@ -17,11 +17,8 @@ jobs:
         with:
           node-version: 14
 
-      - run: npm install
-      - run: npm start
-      
       - run: |
           git checkout --orphan gh-pages
-          git rm -r --cached .
-          git commit --allow-empty -m 'Create gh-pages'
-          git checkout master --force
+
+      - run: npm install
+      - run: npm start
