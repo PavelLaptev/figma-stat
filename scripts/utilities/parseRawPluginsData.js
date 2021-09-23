@@ -12,15 +12,15 @@ export function parseRawPluginsData(data) {
         publisherId: plugin.publisher.id,
         publisherName: plugin.publisher.name,
         iconUrl: `https://www.figma.com/community/plugin/${plugin.id}/icon`,
-        thumbnailUrl: `https://www.figma.com/community/plugin/${plugin.id}/thumbnail`
+        thumbnailUrl: `https://www.figma.com/community/plugin/${plugin.id}/thumbnail`,
       },
       counters: {
         installCount: plugin.install_count,
         likeCount: plugin.like_count,
         viewCount: plugin.view_count,
         commentCount: plugin.comment_count,
-        version: metaData.version
-      }
+        version: metaData.version,
+      },
     };
   });
 

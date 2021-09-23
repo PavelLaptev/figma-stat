@@ -1,5 +1,5 @@
 {
-  "name": "terminal-nodejs-filter-json",
+  "name": "figma-stat",
   "version": "0.1.0",
   "description": "Filter JSON and save it to a separate file.",
   "scripts": {
