@@ -17,12 +17,15 @@ jobs:
         with:
           node-version: 14
 
-      - run: |
-          git checkout --orphan gh-pages
+#       - run: |
+#           git checkout --orphan gh-pages
 
       - run: npm install
       - run: npm start
       
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: data
 
