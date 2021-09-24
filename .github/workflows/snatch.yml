@@ -2,7 +2,7 @@ name: snatch
 
 on:
   schedule:
-    - cron: '11 2 * * *'
+    - cron: '20 2 * * *'
 
 jobs:
   build:
