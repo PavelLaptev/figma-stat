@@ -17,14 +17,17 @@ jobs:
         with:
           node-version: 14
 
-      - run: git checkout gh-pages
-
       - run: npm install
       - run: npm start
       
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: data
+      - run: |
+          rm -rf .git
+          git clone --single-branch --branch gh-pages
+          cd gh-pages
+          git config user.email actions@github.com
+          git config user.name 'GitHub Actions'
+          cp -r ../data/. .
+          git add .
+          git commit -m 'snatched'
+          git push origin gh-pages
 
