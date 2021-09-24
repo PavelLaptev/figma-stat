@@ -22,7 +22,7 @@ jobs:
       
       - run: |
           rm -rf .git
-          git clone --single-branch --branch gh-pages PavelLaptev/figma-stat gh-pages
+          git clone --single-branch --branch gh-pages https://github.com/PavelLaptev/figma-stat.git gh-pages
           cd gh-pages
           git config user.email actions@github.com
           git config user.name 'GitHub Actions'
