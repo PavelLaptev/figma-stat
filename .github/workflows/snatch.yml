@@ -28,5 +28,5 @@ jobs:
           git config user.name 'GitHub Actions'
           cp -r ../data/. .
           git add .
-          git commit --date -m
+          git commit -m 'snatched'
           git push origin gh-pages
