@@ -7,7 +7,8 @@ const directories = {
 };
 
 export async function writeData(data) {
-  const date = new Date().toISOString().slice(0, 10);
+  // const date = new Date().toISOString().slice(0, 10);
+  const date = new Date().toISOString();
 
   await data.forEach((plugin) => {
     const directory = `${directories.main}/${directories.plugins}/${plugin.info.id}`;
