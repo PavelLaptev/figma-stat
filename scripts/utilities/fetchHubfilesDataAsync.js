@@ -5,7 +5,7 @@ import { fetchAsync } from './fetchAsync.js';
 export async function fetchHubfilesDataAsync() {
   let result = [];
   let url =
-    'https://www.figma.com/api/hub_files/all?sort_by=&sort_order=desc&pagination_direction=next&page_size=25';
+    'https://www.figma.com/api/hub_files/all?sort_by=created_at&sort_order=desc&pagination_direction=next&page_size=25';
 
   while (typeof url !== 'undefined') {
     const response = await fetchAsync(url);
@@ -15,7 +15,7 @@ export async function fetchHubfilesDataAsync() {
       result = result.concat(parseRawHubfilesData(json.meta.hub_files));
       url = json.pagination.next_page;
       console.log(url);
-      writeHubfilesData(result);
+      // writeHubfilesData(result);
     } else {
       return;
     }
