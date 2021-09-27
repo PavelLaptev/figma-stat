@@ -14,8 +14,7 @@ export async function fetchHubfilesDataAsync() {
 
     result = result.concat(parseRawHubfilesData(json.meta.hub_files));
     url = json.pagination.next_page;
-    console.log(count++, url);
-    // writeHubfilesData(result);
+    writeHubfilesData(result);
   }
 
   // const response = await fetchAsync(url);
