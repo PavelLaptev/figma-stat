@@ -8,7 +8,7 @@ export function parseRawPluginsData(data) {
         name: metaData.name,
         lastUpdateDate: metaData.created_at,
         publisherHandle: plugin.publisher.profile_handle,
-        publisherImage: plugin.publisher.id,
+        publisherImage: plugin.publisher.img_url,
         publisherId: plugin.publisher.id,
         publisherName: plugin.publisher.name,
         iconUrl: `https://www.figma.com/community/plugin/${plugin.id}/icon`,
@@ -24,7 +24,5 @@ export function parseRawPluginsData(data) {
     };
   });
 
-  return plugins.sort(function (a, b) {
-    return a.info.name.localeCompare(b.info.name);
-  });
+  return plugins;
 }

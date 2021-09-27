@@ -6,7 +6,7 @@ const directories = {
   counters: 'counters',
 };
 
-export async function writeData(data) {
+export async function writePluginData(data) {
   const date = new Date().toISOString().slice(0, 10);
 
   await data.forEach((plugin) => {

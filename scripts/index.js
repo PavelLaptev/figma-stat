@@ -1,5 +1,5 @@
-import { writeData } from './utilities/writeData.js';
 import { fetchPluginsDataAsync } from './utilities/fetchPluginsDataAsync.js';
+import { fetchHubfilesDataAsync } from './utilities/fetchHubfilesDataAsync.js';
 
-const parsedPluginData = await fetchPluginsDataAsync();
-await writeData(parsedPluginData);
+await fetchPluginsDataAsync();
+await fetchHubfilesDataAsync();

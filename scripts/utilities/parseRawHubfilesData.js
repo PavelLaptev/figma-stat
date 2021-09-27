@@ -1,0 +1,27 @@
+export function parseRawHubfilesData(data) {
+  const hubfiles = data.map((file) => {
+    const metaData = Object.values(file.versions)[0];
+
+    return {
+      info: {
+        id: file.id,
+        name: metaData.name,
+        lastUpdateDate: metaData.created_at,
+        publisherHandle: file.publisher.profile_handle,
+        publisherImage: file.publisher.img_url,
+        publisherId: file.publisher.id,
+        publisherName: file.publisher.name,
+        thumbnailUrl: file.redirect_thumbnail_url,
+      },
+      counters: {
+        duplicateCount: file.duplicate_count,
+        likeCount: file.like_count,
+        viewCount: file.view_count,
+        commentCount: file.comment_count,
+        version: metaData.version,
+      },
+    };
+  });
+
+  return hubfiles;
+}
