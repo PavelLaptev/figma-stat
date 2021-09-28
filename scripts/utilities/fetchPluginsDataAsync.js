@@ -13,6 +13,7 @@ export async function fetchPluginsDataAsync() {
 
     result = result.concat(parseRawPluginsData(json.meta.plugins));
     url = json.pagination.next_page;
+    console.log(count++, url);
     writePluginData(result);
   }
 
