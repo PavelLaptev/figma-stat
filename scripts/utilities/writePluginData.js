@@ -13,7 +13,7 @@ export async function writePluginData(data) {
     const directory = `${directories.main}/${directories.plugins}/${plugin.info.id}`;
     const infoFile = `${directory}/info.json`;
     const dateFile = `${directory}/${directories.counters}/${date}.json`;
-    const currentDateFile = `${directory}/${directories.counters}/current.json`;
+    const currentDateFile = `${directory}/${directories.counters}/latest.json`;
 
     fs.outputFile(infoFile, JSON.stringify(plugin.info), 'utf8');
     fs.outputFile(dateFile, JSON.stringify(plugin.counters), 'utf8');

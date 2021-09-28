@@ -13,7 +13,7 @@ export async function writeHubfilesData(data) {
     const directory = `${directories.main}/${directories.hub_files}/${file.info.id}`;
     const infoFile = `${directory}/info.json`;
     const dateFile = `${directory}/${directories.counters}/${date}.json`;
-    const currentDateFile = `${directory}/${directories.counters}/current.json`;
+    const currentDateFile = `${directory}/${directories.counters}/latest.json`;
 
     fs.outputFile(infoFile, JSON.stringify(file.info), 'utf8');
     fs.outputFile(dateFile, JSON.stringify(file.counters), 'utf8');
