@@ -12,7 +12,7 @@ export async function fetchPluginsDataAsync() {
     const response = await fetchAsync(url);
     const json = await response.json();
 
-    result = result.concat(parseRawPluginsData(json.meta.plugins));
+    result = parseRawPluginsData(json.meta.plugins);
     url = json.pagination.next_page;
     console.log(count++, url);
     writePluginData(result);

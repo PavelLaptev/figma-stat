@@ -15,8 +15,8 @@ export async function writePluginData(data) {
     const dateDir = `${directory}/${directories.counters}/${date}.json`;
     const currentDateDir = `${directory}/${directories.counters}/latest.json`;
 
-    fse.outputJson(infoDir, plugin.info);
-    fse.outputJson(dateDir, plugin.counters);
-    fse.outputJson(currentDateDir, plugin.counters);
+    fse.outputJsonSync(infoDir, plugin.info);
+    fse.outputJsonSync(dateDir, plugin.counters);
+    fse.outputJsonSync(currentDateDir, plugin.counters);
   });
 }

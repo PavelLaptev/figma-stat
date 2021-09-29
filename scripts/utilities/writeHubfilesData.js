@@ -15,8 +15,8 @@ export async function writeHubfilesData(data) {
     const dateFile = `${directory}/${directories.counters}/${date}.json`;
     const currentDateFile = `${directory}/${directories.counters}/latest.json`;
 
-    fs.outputFile(infoFile, JSON.stringify(file.info), 'utf8');
-    fs.outputFile(dateFile, JSON.stringify(file.counters), 'utf8');
-    fs.outputFile(currentDateFile, JSON.stringify(file.counters), 'utf8');
+    fs.outputJsonSync(infoFile, file.info);
+    fs.outputJsonSync(dateFile, file.counters);
+    fs.outputJsonSync(currentDateFile, file.counters);
   });
 }
