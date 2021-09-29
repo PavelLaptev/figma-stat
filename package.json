@@ -4,7 +4,7 @@
   "description": "Filter JSON and save it to a separate file.",
   "scripts": {
     "snatch-plugins": "node scripts/snatchPlugins.js",
-    "snatch-files-2021": "node scripts/snatchFiles.js",
+    "snatch-files": "node scripts/snatchFiles.js",
     "prettier-format": "prettier --config .prettierrc 'scripts/**/*.js' --write",
     "prettier-watch": "onchange 'scripts/**/*.js' -- prettier --write {{changed}}"
   },
