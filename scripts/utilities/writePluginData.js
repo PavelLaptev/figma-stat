@@ -1,4 +1,4 @@
-import fs from 'fs-extra';
+import fse from 'fs-extra';
 
 const directories = {
   main: 'data',
@@ -11,12 +11,12 @@ export async function writePluginData(data) {
 
   await data.forEach((plugin) => {
     const directory = `${directories.main}/${directories.plugins}/${plugin.info.id}`;
-    const infoFile = `${directory}/info.json`;
-    const dateFile = `${directory}/${directories.counters}/${date}.json`;
-    const currentDateFile = `${directory}/${directories.counters}/latest.json`;
+    const infoDir = `${directory}/info.json`;
+    const dateDir = `${directory}/${directories.counters}/${date}.json`;
+    const currentDateDir = `${directory}/${directories.counters}/latest.json`;
 
-    fs.outputFile(infoFile, JSON.stringify(plugin.info), 'utf8');
-    fs.outputFile(dateFile, JSON.stringify(plugin.counters), 'utf8');
-    fs.outputFile(currentDateFile, JSON.stringify(plugin.counters), 'utf8');
+    fse.outputJson(infoDir, plugin.info);
+    fse.outputJson(dateDir, plugin.counters);
+    fse.outputJson(currentDateDir, plugin.counters);
   });
 }
