@@ -22,15 +22,6 @@ jobs:
 #       - run: npm run snatch-files
 
       - run: |
-#           rm -rf .git
-#           git clone --single-branch --branch gh-pages --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
-#           cd gh-pages
-#           git config user.email actions@github.com
-#           git config user.name 'GitHub Actions'
-#           cp -r ../data/. .
-#           git add .
-#           git commit -m 'snatched'
-#           git push origin gh-pages
             git add .
             git commit -m 'snatched'
             git push origin main
