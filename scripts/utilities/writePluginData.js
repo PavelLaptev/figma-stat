@@ -3,7 +3,6 @@ import fse from 'fs-extra';
 const directories = {
   main: 'data',
   plugins: 'plugins',
-  counters: 'counters',
 };
 
 export async function writePluginData(data) {
