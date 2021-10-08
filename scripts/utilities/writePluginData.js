@@ -17,6 +17,7 @@ export async function writePluginData(data) {
         fse.outputJsonSync(countersDir, [plugin.counters]);
       } else {
         const currentJSON = JSON.parse(data);
+        console.log(currentJSON);
         const newJSON = [...currentJSON, plugin.counters];
         fse.outputJsonSync(countersDir, newJSON);
       }
