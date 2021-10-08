@@ -19,7 +19,6 @@ jobs:
           node-version: 14
           
       - run: npm install
-      - run: git checkout gh-pages
       - run: npm run snatch-plugins
 #       - run: npm run snatch-files
 
