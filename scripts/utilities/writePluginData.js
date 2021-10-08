@@ -14,16 +14,21 @@ export async function writePluginData(data) {
 
     fse.readFile(countersDir, (err, data) => {
       if (err) {
-        fse.outputJsonSync(countersDir, [plugin.counters]);
+        console.log(err);
       } else {
-        const currentJSON = JSON.parse(data);
-        console.log(currentJSON);
-        const newJSON = [...currentJSON, plugin.counters];
-        fse.outputJsonSync(countersDir, newJSON);
+        console.log(data);
       }
+      // if (err) {
+      //   fse.outputJsonSync(countersDir, [plugin.counters]);
+      // } else {
+      //   const currentJSON = JSON.parse(data);
+      //   console.log(currentJSON);
+      //   const newJSON = [...currentJSON, plugin.counters];
+      //   fse.outputJsonSync(countersDir, newJSON);
+      // }
     });
 
-    fse.outputJsonSync(infoDir, plugin.info);
-    fse.outputJsonSync(currentcountersDir, plugin.counters);
+    // fse.outputJsonSync(infoDir, plugin.info);
+    // fse.outputJsonSync(currentcountersDir, plugin.counters);
   });
 }
