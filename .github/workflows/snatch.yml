@@ -18,8 +18,12 @@ jobs:
           node-version: 14
           
       - run: npm install
+<<<<<<< HEAD
       - run: npm run snatch-plugins
 #       - run: npm run snatch-files
+=======
+      - run: npm run snatch-files
+>>>>>>> parent of 026a163a97 (Update snatch.yml)
 
       - run: |
           git add .
