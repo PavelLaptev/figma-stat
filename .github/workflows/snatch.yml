@@ -16,17 +16,10 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-          
+
       - run: npm install
-<<<<<<< HEAD
-<<<<<<< HEAD
       - run: npm run snatch-plugins
-#       - run: npm run snatch-files
-=======
-=======
->>>>>>> parent of 026a163a97 (Update snatch.yml)
       - run: npm run snatch-files
->>>>>>> parent of 026a163a97 (Update snatch.yml)
 
       - run: |
           git add .
