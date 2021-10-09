@@ -1,8 +1,5 @@
 export function parseRawPluginsData(data) {
   const plugins = data.map((plugin) => {
-    const date = new Date().toISOString();
-    const shortDate = date.slice(0, 10);
-    const time = date.slice(11, 19);
     const metaData = Object.values(plugin.versions)[0];
 
     return {
@@ -18,8 +15,6 @@ export function parseRawPluginsData(data) {
         thumbnailUrl: `https://www.figma.com/community/plugin/${plugin.id}/thumbnail`,
       },
       counters: {
-        date: shortDate,
-        time: time,
         installCount: plugin.install_count,
         likeCount: plugin.like_count,
         viewCount: plugin.view_count,
