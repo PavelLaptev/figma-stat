@@ -1,9 +1,9 @@
 name: snatch
 
 on:
-#   push:
-#     branches:
-#       - main
+  # push:
+  #   branches:
+  #     - main
 # schedule:
 #   - cron: '0 6 * * *'
 
@@ -19,15 +19,15 @@ jobs:
 
       - run: npm install
       - run: npm run snatch-plugins
-      - run: npm run snatch-files
+      # - run: npm run snatch-files
 
       - run: |
           rm -rf .git
-          git clone --single-branch --branch gh-pages --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages
-          cd gh-pages
+          git clone --single-branch --branch empty-branch --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git empty-branch
+          cd empty-branch
           git config user.email actions@github.com
           git config user.name 'GitHub Actions'
           cp -r ../data/. .
           git add .
           git commit -m 'snatched'
-          git push origin gh-pages
+          git push origin empty-branch

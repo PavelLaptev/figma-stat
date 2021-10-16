@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Filter JSON and save it to a separate file.",
   "scripts": {
-    "snatch-plugins": "node scripts/snatchPlugins.js",
-    "snatch-files": "node scripts/snatchFiles.js",
+    "snatch-plugins": "node scripts/plugins/snatchPlugins.js",
+    "snatch-files": "node scripts/files/snatchFiles.js",
     "prettier-format": "prettier --config .prettierrc 'scripts/**/*.js' --write",
     "prettier-watch": "onchange 'scripts/**/*.js' -- prettier --write {{changed}}"
   },
