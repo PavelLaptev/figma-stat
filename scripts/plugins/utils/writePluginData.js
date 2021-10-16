@@ -6,7 +6,7 @@ export async function writePluginData(data) {
   // const date = new Date().toISOString().slice(0, 10);
 
   await data.forEach(async (plugin) => {
-    const pluginUrl = `https://raw.githubusercontent.com/PavelLaptev/figma-stat/data/plugins/${plugin.info.id}/counters.json`;
+    const pluginUrl = `https://pavellaptev.github.io/figma-stat/plugins/${plugin.info.id}/counters.json`;
 
     const directory = `data/plugins/${plugin.info.id}`;
     const infoDir = `${directory}/info.json`;
