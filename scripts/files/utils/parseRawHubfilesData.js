@@ -1,6 +1,7 @@
 export function parseRawHubfilesData(data) {
   const hubfiles = data.map((file) => {
     const metaData = Object.values(file.versions)[0];
+    const date = new Date().toISOString().slice(0, 10);
 
     return {
       info: {
@@ -12,8 +13,10 @@ export function parseRawHubfilesData(data) {
         publisherId: file.publisher.id,
         publisherName: file.publisher.name,
         thumbnailUrl: file.redirect_thumbnail_url,
+        url: `https://www.figma.com/community/file/${file.id}`,
       },
       counters: {
+        date: date,
         duplicateCount: file.duplicate_count,
         likeCount: file.like_count,
         viewCount: file.view_count,

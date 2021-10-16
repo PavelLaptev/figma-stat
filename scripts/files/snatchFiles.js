@@ -1,3 +1,3 @@
-import { fetchHubfilesDataAsync } from '../utilities/fetchHubfilesDataAsync.js';
+import { fetchHubfilesDataAsync } from './utils/fetchHubfilesDataAsync.js';
 
 await fetchHubfilesDataAsync();

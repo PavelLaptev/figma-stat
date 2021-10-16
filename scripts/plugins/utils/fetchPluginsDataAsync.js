@@ -18,14 +18,3 @@ export async function fetchPluginsDataAsync() {
     writePluginData(result);
   }
 }
-
-// export async function fetchPluginsDataAsync() {
-//   let url =
-//     'https://www.figma.com/api/plugins/browse?sort_by=popular&sort_order=desc&resource_type=plugins&page_size=6';
-
-//   const response = await fetchAsync(url);
-//   const json = await response.json();
-
-//   let result = parseRawPluginsData(json.meta.plugins);
-//   writePluginData(result);
-// }

@@ -12,6 +12,7 @@ export function parseRawPluginsData(data) {
         publisherImage: plugin.publisher.img_url,
         publisherId: plugin.publisher.id,
         publisherName: plugin.publisher.name,
+        url: `https://www.figma.com/community/plugin/${plugin.id}`,
         iconUrl: `https://www.figma.com/community/plugin/${plugin.id}/icon`,
         thumbnailUrl: `https://www.figma.com/community/plugin/${plugin.id}/thumbnail`,
       },

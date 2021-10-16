@@ -18,8 +18,8 @@ jobs:
           node-version: 14
 
       - run: npm install
-      - run: npm run snatch-plugins
-      # - run: npm run snatch-files
+      # - run: npm run snatch-plugins
+      - run: npm run snatch-files
 
       - run: |
           rm -rf .git

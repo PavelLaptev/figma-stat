@@ -1,9 +1,8 @@
 import fse from 'fs-extra';
-
 import { fetchAsync } from '../../utils/fetchAsync.js';
 
 export async function writePluginData(data) {
-  // const date = new Date().toISOString().slice(0, 10);
+  const date = new Date().toISOString().slice(0, 10);
 
   await data.forEach(async (plugin) => {
     const pluginUrl = `https://pavellaptev.github.io/figma-stat/plugins/${plugin.info.id}/counters.json`;
