@@ -3,8 +3,6 @@ export function parseRawPluginsData(data) {
     const metaData = Object.values(plugin.versions)[0];
     const date = new Date().toISOString().slice(0, 10);
 
-    console.log(metaData);
-
     return {
       info: {
         id: plugin.id,
