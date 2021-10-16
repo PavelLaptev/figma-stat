@@ -22,12 +22,12 @@ jobs:
       # - run: npm run snatch-files
 
       - run: |
-          rm -rf .git
-          git clone --single-branch --branch data --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git data
-          cd data
+          # rm -rf .git
+          git clone --single-branch --branch empty-branch --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git empty-branch
+          cd empty-branch
           git config user.email actions@github.com
           git config user.name 'GitHub Actions'
           cp -r ../data/. .
           git add .
           git commit -m 'snatched'
-          git push origin data
+          git push origin empty-branch
