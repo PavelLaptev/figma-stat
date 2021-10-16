@@ -2,8 +2,6 @@ import fse from 'fs-extra';
 import { fetchAsync } from '../../utils/fetchAsync.js';
 
 export async function writeHubfilesData(data) {
-  const date = new Date().toISOString().slice(0, 10);
-
   await data.forEach(async (file) => {
     const fileUrl = `https://pavellaptev.github.io/figma-stat/hub_files/${file.info.id}/counters.json`;
 

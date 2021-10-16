@@ -3,6 +3,8 @@ export function parseRawPluginsData(data) {
     const metaData = Object.values(plugin.versions)[0];
     const date = new Date().toISOString().slice(0, 10);
 
+    console.log(metaData);
+
     return {
       info: {
         id: plugin.id,
@@ -12,6 +14,7 @@ export function parseRawPluginsData(data) {
         publisherImage: plugin.publisher.img_url,
         publisherId: plugin.publisher.id,
         publisherName: plugin.publisher.name,
+        description: metaData.description,
         url: `https://www.figma.com/community/plugin/${plugin.id}`,
         iconUrl: `https://www.figma.com/community/plugin/${plugin.id}/icon`,
         thumbnailUrl: `https://www.figma.com/community/plugin/${plugin.id}/thumbnail`,

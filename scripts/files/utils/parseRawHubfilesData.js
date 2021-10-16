@@ -13,6 +13,7 @@ export function parseRawHubfilesData(data) {
         publisherId: file.publisher.id,
         publisherName: file.publisher.name,
         thumbnailUrl: file.redirect_thumbnail_url,
+        description: metaData.description,
         url: `https://www.figma.com/community/file/${file.id}`,
       },
       counters: {
