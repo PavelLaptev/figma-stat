@@ -4,7 +4,7 @@ import { fetchAsync } from '../../utils/fetchAsync.js';
 
 export async function fetchPluginsDataAsync() {
   let url =
-    'https://www.figma.com/api/plugins/browse?sort_by=popular&sort_order=desc&resource_type=plugins&page_size=5';
+    'https://www.figma.com/api/plugins/browse?sort_by=popular&sort_order=desc&resource_type=plugins&page_size=25';
   let result = [];
   let count = 1;
 
