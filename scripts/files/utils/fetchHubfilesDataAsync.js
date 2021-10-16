@@ -21,7 +21,7 @@ import { fetchAsync } from '../../utils/fetchAsync.js';
 
 export async function fetchHubfilesDataAsync() {
   let url =
-    'https://www.figma.com/api/hub_files/all?sort_by=created_at&sort_order=desc&pagination_direction=next&page_size=5';
+    'https://www.figma.com/api/hub_files/all?sort_by=created_at&sort_order=desc&pagination_direction=next&page_size=7';
 
   const response = await fetchAsync(url);
   const json = await response.json();
@@ -29,5 +29,4 @@ export async function fetchHubfilesDataAsync() {
   let result = parseRawHubfilesData(json.meta.hub_files);
 
   writeHubfilesData(result);
-  console.log(result);
 }

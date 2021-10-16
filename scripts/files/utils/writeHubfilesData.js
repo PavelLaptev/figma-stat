@@ -9,7 +9,7 @@ export async function writeHubfilesData(data) {
 
     const directory = `data/hub_files/${file.info.id}`;
     const infoDir = `${directory}/info.json`;
-    const dateDir = `${directory}/${date}.json`;
+    const dateDir = `${directory}/counters.json`;
     const currentDateDir = `${directory}/latest.json`;
 
     await fetchAsync(fileUrl).then(async (data) => {
