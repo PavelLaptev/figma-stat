@@ -22,7 +22,6 @@ jobs:
       # - run: npm run snatch-files
 
       - run: |
-          # rm -rf .git
           git clone --single-branch --branch data --depth 1 https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git data
           cd data
           git config user.email actions@github.com
