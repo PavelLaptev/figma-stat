@@ -1,9 +1,9 @@
 name: snatch
 
 on:
-  # push:
-  #   branches:
-  #     - one-json-test
+  push:
+    branches:
+      - main
 # schedule:
 #   - cron: '0 6 * * *'
 
