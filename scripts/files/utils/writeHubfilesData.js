@@ -36,8 +36,8 @@ export async function writeHubfilesData(data) {
         fse.outputJsonSync(currentDateDir, file.counters);
         fse.outputJsonSync(changeeDir, changeStat);
       } catch (err) {
-        console.error(err);
-        console.log('CREATE NEW FOLDER');
+        // console.error(err);
+        console.log(`create new folder for ${file.info.id}`);
 
         fse.outputJsonSync(infoDir, file.info);
         fse.outputJsonSync(dateDir, [file.counters]);
