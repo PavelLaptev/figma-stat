@@ -25,7 +25,7 @@ export async function writeHubfilesData(data) {
         const newJSON = oldJSON.concat(file.counters);
 
         changeStat = {
-          duplicateCount: findChange(newJSON, 'installCount'),
+          duplicateCount: findChange(newJSON, 'duplicateCount'),
           likeCount: findChange(newJSON, 'likeCount'),
           viewCount: findChange(newJSON, 'viewCount'),
           commentCount: findChange(newJSON, 'commentCount'),
