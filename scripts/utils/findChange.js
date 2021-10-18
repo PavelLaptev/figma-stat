@@ -10,10 +10,10 @@ export const findChange = (json, key) => {
   };
 
   return {
-    day: getPerc(2),
-    week: getPerc(7),
-    month: getPerc(30),
-    halfYear: getPerc(180),
-    year: getPerc(360),
+    day: getPerc(2) ? getPerc(2) : 0,
+    week: getPerc(7) ? getPerc(7) : 0,
+    month: getPerc(30) ? getPerc(30) : 0,
+    halfYear: getPerc(180) ? getPerc(180) : 0,
+    year: getPerc(360) ? getPerc(360) : 0,
   };
 };
