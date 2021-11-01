@@ -13,6 +13,12 @@ Each folder contains:
 - `latest.json`
 - `change.json.`
 
+---
+
+### [🕹️ DEMO](https://pavellaptev.github.io/get-figma-stat/)
+
+---
+
 ## How to fetch data
 
 ```js
