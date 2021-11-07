@@ -1,6 +1,6 @@
 import { parseRawHubfilesData } from './parseRawHubfilesData.js';
 import { writeHubfilesData } from './writeHubfilesData.js';
-import { fetchAsync } from '../../utils/fetchAsync.js';
+import { fetchAsync } from '../utils/fetchAsync.js';
 
 export async function fetchHubfilesDataAsync() {
   let url =
@@ -12,9 +12,12 @@ export async function fetchHubfilesDataAsync() {
 
     const result = parseRawHubfilesData(json.meta.hub_files);
     url = json.pagination.next_page;
+
     writeHubfilesData(result);
   }
 }
+
+fetchHubfilesDataAsync();
 
 ////////////////////////////////////////////////////////////////////////////////
 
