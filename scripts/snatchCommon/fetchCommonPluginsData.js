@@ -3,7 +3,7 @@ import { fetchAsync } from '../utils/fetchAsync.js';
 
 export async function fetchPluginsDataAsync() {
   const arrayLength = 75;
-  const trimArrayLength = 25;
+  const trimArrayLength = 40;
   let url = `https://www.figma.com/api/plugins/browse?sort_by=updated_at&sort_order=desc&resource_type=plugins&page_size=${arrayLength}`;
 
   let totalAmount = {
