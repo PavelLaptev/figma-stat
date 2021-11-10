@@ -91,6 +91,8 @@ export async function fetchPluginsDataAsync() {
           name: a.name,
           icon: a.icon,
           duplicates: a.duplicates,
+          publisherID: a.publisherID,
+          publisherName: a.publisherName,
         };
       }),
     topLikes: topSorted
@@ -102,6 +104,8 @@ export async function fetchPluginsDataAsync() {
           name: a.name,
           icon: a.icon,
           likes: a.likes,
+          publisherID: a.publisherID,
+          publisherName: a.publisherName,
         };
       }),
     topViews: topSorted
@@ -113,6 +117,8 @@ export async function fetchPluginsDataAsync() {
           name: a.name,
           icon: a.icon,
           views: a.views,
+          publisherID: a.publisherID,
+          publisherName: a.publisherName,
         };
       }),
     topComments: topSorted
@@ -124,6 +130,8 @@ export async function fetchPluginsDataAsync() {
           name: a.name,
           icon: a.icon,
           comments: a.comments,
+          publisherID: a.publisherID,
+          publisherName: a.publisherName,
         };
       }),
     topPopularUsers: topSorted
