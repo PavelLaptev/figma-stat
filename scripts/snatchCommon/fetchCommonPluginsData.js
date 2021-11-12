@@ -20,6 +20,7 @@ export async function fetchPluginsDataAsync() {
     icon: '',
     publisherName: '',
     publisherID: '',
+    publisherHandle: '',
     publisherIcon: '',
     installs: 0,
     likes: 0,
@@ -63,6 +64,7 @@ export async function fetchPluginsDataAsync() {
         name: Object.values(a.versions)[0].name,
         icon: `https://www.figma.com/community/plugin/${a.id}/icon`,
         publisherName: a.publisher.name,
+        publisherHandle: a.publisher.profile_handle,
         publisherID: a.publisher.id,
         publisherIcon: a.publisher.img_url,
         installs: a.install_count,
@@ -94,6 +96,7 @@ export async function fetchPluginsDataAsync() {
           installs: a.installs,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topLikes: topSorted
@@ -107,6 +110,7 @@ export async function fetchPluginsDataAsync() {
           likes: a.likes,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topViews: topSorted
@@ -120,6 +124,7 @@ export async function fetchPluginsDataAsync() {
           views: a.views,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topComments: topSorted
@@ -133,6 +138,7 @@ export async function fetchPluginsDataAsync() {
           comments: a.comments,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topPopularUsers: topSorted
@@ -146,6 +152,7 @@ export async function fetchPluginsDataAsync() {
           id: a.publisherID,
           name: a.publisherName,
           publisherIcon: a.publisherIcon,
+          publisherHandle: a.publisherHandle,
           followers: a.followers,
         };
       }),

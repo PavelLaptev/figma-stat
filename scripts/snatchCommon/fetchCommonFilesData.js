@@ -19,6 +19,7 @@ export async function fetchPluginsDataAsync() {
     name: '',
     publisherName: '',
     publisherID: '',
+    publisherHandle: '',
     publisherIcon: '',
     duplicates: 0,
     likes: 0,
@@ -62,6 +63,7 @@ export async function fetchPluginsDataAsync() {
         name: Object.values(a.versions)[0].name,
         icon: `https://www.figma.com/community/plugin/${a.id}/icon`,
         publisherName: a.publisher.name,
+        publisherHandle: a.publisher.profile_handle,
         publisherID: a.publisher.id,
         publisherIcon: a.publisher.img_url,
         duplicates: a.duplicate_count,
@@ -93,6 +95,7 @@ export async function fetchPluginsDataAsync() {
           duplicates: a.duplicates,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topLikes: topSorted
@@ -106,6 +109,7 @@ export async function fetchPluginsDataAsync() {
           likes: a.likes,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topViews: topSorted
@@ -119,6 +123,7 @@ export async function fetchPluginsDataAsync() {
           views: a.views,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topComments: topSorted
@@ -132,6 +137,7 @@ export async function fetchPluginsDataAsync() {
           comments: a.comments,
           publisherID: a.publisherID,
           publisherName: a.publisherName,
+          publisherHandle: a.publisherHandle,
         };
       }),
     topPopularUsers: topSorted
@@ -145,6 +151,7 @@ export async function fetchPluginsDataAsync() {
           id: a.publisherID,
           name: a.publisherName,
           publisherIcon: a.publisherIcon,
+          publisherHandle: a.publisherHandle,
           followers: a.followers,
         };
       }),
