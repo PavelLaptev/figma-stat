@@ -29,6 +29,8 @@ export async function fetchPluginsDataAsync() {
     followers: 0,
   });
 
+  let allPluginsId = [];
+
   while (typeof url !== 'undefined') {
     const response = await fetchAsync(url);
     const json = await response.json();
@@ -59,6 +61,8 @@ export async function fetchPluginsDataAsync() {
     /////////// Compare likes ////////////
     //////////////////////////////////////
     const topCurrent = result.map((a) => {
+      allPluginsId.push(a.id);
+
       return {
         id: a.id,
         name: Object.values(a.versions)[0].name,
@@ -159,6 +163,7 @@ export async function fetchPluginsDataAsync() {
   };
 
   fse.outputJsonSync(`data/plugins/common.json`, topData);
+  fse.outputJsonSync(`data/plugins/allIds.json`, allPluginsId);
   console.log(topData);
 }
 

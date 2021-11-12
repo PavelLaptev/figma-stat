@@ -28,6 +28,8 @@ export async function fetchPluginsDataAsync() {
     followers: 0,
   });
 
+  let allFilesId = [];
+
   while (typeof url !== 'undefined') {
     const response = await fetchAsync(url);
     const json = await response.json();
@@ -58,6 +60,8 @@ export async function fetchPluginsDataAsync() {
     /////////// Compare likes ////////////
     //////////////////////////////////////
     const topCurrent = result.map((a) => {
+      allFilesId.push(a.id);
+
       return {
         id: a.id,
         name: Object.values(a.versions)[0].name,
@@ -158,6 +162,7 @@ export async function fetchPluginsDataAsync() {
   };
 
   fse.outputJsonSync(`data/hub_files/common.json`, topData);
+  fse.outputJsonSync(`data/hub_files/allIds.json`, allFilesId);
   console.log(topData);
 }
 
