@@ -5,8 +5,10 @@
   "scripts": {
     "snatch-plugins": "node scripts/plugins/fetchPluginsData.js",
     "snatch-files": "node scripts/files/fetchHubfilesData.js",
+    "snatch-widgets": "node scripts/widgets/fetchWidgetsData.js",
     "snatch-common-plugins-data": "node scripts/snatchCommon/fetchCommonPluginsData.js",
     "snatch-common-files-data": "node scripts/snatchCommon/fetchCommonFilesData.js",
+    "snatch-common-widgets-data": "node scripts/snatchCommon/fetchCommonWidgetsData.js",
     "prettier-format": "prettier --config .prettierrc 'scripts/**/*.js' --write",
     "prettier-watch": "onchange 'scripts/**/*.js' -- prettier --write {{changed}}"
   },
