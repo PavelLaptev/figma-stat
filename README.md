@@ -2,7 +2,7 @@
 
 Everyday at 6 am (UTC timezone) the github script captures all avalible Figma plugins and files.
 
-All information is stored in a separate [github branch](https://github.com/PavelLaptev/figma-stat/tree/gh-pages) and divided into two folders — [plugins](https://github.com/PavelLaptev/figma-stat/tree/gh-pages/plugins) and [hub_files](https://github.com/PavelLaptev/figma-stat/tree/gh-pages/hub_files).
+All information is stored in a separate [github branch](https://github.com/PavelLaptev/figma-stat/tree/gh-pages) and divided into two folders — [plugins](https://github.com/PavelLaptev/figma-stat/tree/gh-pages/plugins), [hub_files](https://github.com/PavelLaptev/figma-stat/tree/gh-pages/hub_files) and [widgets](https://github.com/PavelLaptev/figma-stat/tree/gh-pages/widgets).
 
 All data about your plugins also stored in a separate folder like `https://github.com/PavelLaptev/figma-stat/tree/gh-pages/plugins/your-plugin-id`.
 
@@ -11,7 +11,6 @@ Each folder contains:
 - `info.json`
 - `counters.json`
 - `latest.json`
-- `change.json.`
 
 ---
 
@@ -26,8 +25,7 @@ Each folder contains:
 const fetchLinks = {
   info: `https://pavellaptev.github.io/figma-stat/plugins/1000012087652644703/info.json`,
   counters: `https://pavellaptev.github.io/figma-stat/plugins/1000012087652644703/counters.json`,
-  latest: `https://pavellaptev.github.io/figma-stat/plugins/1000012087652644703/latest.json`,
-  change: `https://pavellaptev.github.io/figma-stat/plugins/1000012087652644703/change.json`,
+  latest: `https://pavellaptev.github.io/figma-stat/plugins/1000012087652644703/latest.json`
 };
 
 // Fetch certain data
